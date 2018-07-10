@@ -1,6 +1,7 @@
 # checkin-mask-view
 `Android Bitmap PorterDuffXfermode One of Uses`
-`项目还不能直接用 目前只做学习展示`
+
+##### 使用PorterDuffXfermode-PorterDuff.Mode.SRC_IN 模式做的一个过渡效果。原理是两张图片叠加的效果，一张合成的图以及对应的需要展示效果的Mask图片。通过动画去操作Mask层级的图片，就可以实现该效果。
 
 
 ## Preview
@@ -9,7 +10,11 @@
 ## Core Practice
 #### Assemble Bitmaps
 ```java
-public void updateTodayCheckInUI(int convertDay, int mask, List<Integer> waterDrawables) {
+...
+ private Bitmap mMaskBitmap, mSrcBitmap, mWaterBitmap;
+ private PorterDuffXfermode srcInMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
+ 
+ public void updateTodayCheckInUI(int convertDay, int mask, List<Integer> waterDrawables) {
         postDelayed(() -> {
             try {
                 mSrcWidth = mSrcWidth > 0 ? mSrcWidth : getWidth();
@@ -35,7 +40,7 @@ public void updateTodayCheckInUI(int convertDay, int mask, List<Integer> waterDr
                     mWaterBitmap = Bitmap.createBitmap(mSrcWidth, mSrcHeight, Bitmap.Config.ARGB_4444);
                     Bitmap[] bitmaps = new Bitmap[waterDrawables.size()];
                     for (int i = 0; i < bitmaps.length; i++) {
-                        bitmaps[i] = BitmapHelper.scaleImage(BitmapHelper.decodeResource(getContext(), waterDrawables.get(i)), mSrcWidth, mSrcHeight);
+                        bitmaps[i] = BitmapHelper.scaleImage(BitmapHelper.decodeResource(getContext(), waterDrawables.get(i)),            mSrcWidth, mSrcHeight);
                     }
                     mWaterBitmap = BitmapHelper.addWatermarks(mWaterBitmap, bitmaps);
                 }
@@ -50,10 +55,6 @@ public void updateTodayCheckInUI(int convertDay, int mask, List<Integer> waterDr
 #### Draw Bitmap
 
 ```java
- ...
- private Bitmap mMaskBitmap, mSrcBitmap, mWaterBitmap;
- private PorterDuffXfermode srcInMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
- 
  @Override
  protected void onDraw(Canvas canvas) {
       super.onDraw(canvas);
@@ -94,3 +95,5 @@ public void updateTodayCheckInUI(int convertDay, int mask, List<Integer> waterDr
         translationAnimator.start();
     }
 ```
+## About this project
+`整理的一个以前写的View 项目不能直接用 目前只做学习展示`
