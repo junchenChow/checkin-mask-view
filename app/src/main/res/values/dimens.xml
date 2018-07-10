@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="check_in_min_wh">270dp</dimen>
+    <dimen name="check_in_default_margin_top">25dp</dimen>
+    <dimen name="check_in_nav_margin">9dp</dimen>
+    <dimen name="check_in_nav_margin_5">5dp</dimen>
+    <dimen name="WheelItemSpace">12dp</dimen>
+
+</resources>

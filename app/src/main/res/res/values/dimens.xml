@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="check_in_min_wh">270dp</dimen>
+    <dimen name="check_in_default_margin_top">25dp</dimen>
+
+</resources>

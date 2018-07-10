@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.mask.me.checkinmaskview.ProgressWheel
+        android:id="@+id/progress_load_check_in"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="7dp"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_fillRadius="true"
+        app:matProg_progressIndeterminate="true"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/tv_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sc_check_in"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:text="签  到"
+        android:textColor="@color/white"
+        android:textSize="17dp" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CheckinMaskView</string>
+    <string name="text_check_in_month">%d月签到</string>
+    <string name="text_check_in_day">您已连续签到%d天</string>
+    <string name="text_check_in_points">您已获得%d积分</string>
+    <string name="text_check_in_reward">您已获得%s</string>
+    <string name="text_check_in">签  到</string>
+    <string name="text_check_in_finish">去市集看看</string>
+</resources>
