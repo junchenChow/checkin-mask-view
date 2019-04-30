@@ -1,8 +1,9 @@
 # checkin-mask-view
 `Android Bitmap PorterDuffXfermode One of Uses`
 
-##### 使用PorterDuffXfermode-PorterDuff.Mode.SRC_IN 模式做的一个过渡效果。原理是两张图片叠加的效果，一张合成的图以及对应的需要展示效果的Mask图片。通过动画去操作Mask层级的图片，就可以实现该效果。
-
+##### 使用PorterDuffXfermode-PorterDuff.Mode.SRC_IN 模式做的一个过渡效果。
+##### 原理是两张图片叠加的效果，一张合成的图以及对应的需要展示效果的Mask图片。
+##### 通过动画去操作Mask层级的图片，就可以实现该效果。
 
 ## Preview
 ![](1531189836840.gif)
